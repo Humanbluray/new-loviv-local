@@ -22,7 +22,7 @@ def main(page: ft.Page):
         "Poppins-Light": "fonts/Poppins-Light.ttf",
     }
     page.theme = ft.Theme(font_family="Poppins-Medium")
-    page.theme_mode = ft.ThemeMode.DARK
+    page.theme_mode = ft.ThemeMode.LIGHT
     # Dictionnaire pour mapper les routes aux vues
     route_views = {
         LANDING_ROUTE: Landing,
@@ -56,4 +56,4 @@ def main(page: ft.Page):
 
 if __name__ == '__main__':
     port = int(os.getenv("PORT", 8080))
-    ft.app(target=main, route_url_strategy="default", assets_dir="assets", view=ft.AppView.WEB_BROWSER, port=port)  # , view=ft.AppView.WEB_BROWSER, port=port)
+    ft.app(target=main, route_url_strategy="default", assets_dir="assets", port=port)  # , view=ft.AppView.WEB_BROWSER, port=port)
